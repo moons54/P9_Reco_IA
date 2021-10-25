@@ -18,11 +18,12 @@
     },
     {
       "type": "blob",
+      "dataType": "binary",
       "direction": "in",
-      "name": "blbarticle",
-      "path": "data/articles-metadata.csv",
-      "connection": "wkerecommandat6025968683_STORAGE",
-      "dataType": "binary"
+      "name": "blobarticles",
+      "path": "data/articles_metadata.csv",
+      "connection": "myconnectionreco_STORAGE"
     }
+    
   ]
 }

@@ -8,11 +8,12 @@ def main(req: func.HttpRequest, blbarticle: func.InputStream) -> func.HttpRespon
     logging.info('Python HTTP trigger function processed a request.')
 
     name = req.params.get('name')
-    click = pd.read_csv(BytesIO(blbarticle.read()))
-    print('vale de click'+click.info())
+    
     if not name:
         try:
             req_body = req.get_json()
+            click = pd.read_csv(BytesIO(blbarticle.read()))
+            print('vale de click'+click.info())
         except ValueError:
             pass
         else:
@@ -21,6 +22,8 @@ def main(req: func.HttpRequest, blbarticle: func.InputStream) -> func.HttpRespon
     if name:
         return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully.")
     else:
+        click = pd.read_csv(BytesIO(blbarticle.read()))
+        print('vale de click'+click.info())
         return func.HttpResponse(
              "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.",
              status_code=200
