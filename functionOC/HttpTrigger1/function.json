@@ -15,6 +15,14 @@
       "type": "http",
       "direction": "out",
       "name": "$return"
+    },
+    {
+      "type": "blob",
+      "direction": "in",
+      "name": "blbarticle",
+      "path": "data/articles-metadata.csv",
+      "connection": "wkerecommandat6025968683_STORAGE",
+      "dataType": "binary"
     }
   ]
 }

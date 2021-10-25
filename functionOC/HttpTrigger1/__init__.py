@@ -1,12 +1,15 @@
 import logging
-
+from io import BytesIO
 import azure.functions as func
+import pandas as pd
 
 
-def main(req: func.HttpRequest) -> func.HttpResponse:
+def main(req: func.HttpRequest, blbarticle: func.InputStream) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
     name = req.params.get('name')
+    click = pd.read_csv(BytesIO(blbarticle.read()))
+    print('vale de click'+click.info())
     if not name:
         try:
             req_body = req.get_json()

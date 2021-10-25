@@ -4,5 +4,6 @@
     "azureFunctions.pythonVenv": ".venv",
     "azureFunctions.projectLanguage": "Python",
     "azureFunctions.projectRuntime": "~3",
-    "debug.internalConsoleOptions": "neverOpen"
+    "debug.internalConsoleOptions": "neverOpen",
+    "azureML.defaultWorkspaceId": "/subscriptions/d0c5573e-df27-424f-ad4b-0b68fcdcc2b9/resourceGroups/recommandationp9/providers/Microsoft.MachineLearningServices/workspaces/wkerecommandation"
 }
