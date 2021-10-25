@@ -6,7 +6,16 @@
             "type": "python",
             "request": "attach",
             "port": 9091,
-            "preLaunchTask": "func: host start"
+            "preLaunchTask": "func: host start",
+            "env": { "PYTHONPATH": "${workspaceRoot}"}
+        },
+        {
+            "name": "Python : Fichier actuel",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "env": { "PYTHONPATH": "${workspaceRoot}"}
         }
     ]
 }
